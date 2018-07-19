@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package getid;
+
+// The information service definition.
+service Information{
+  // Sends an ID 
+  rpc RequestID (IDRequest) returns (IDReply) {}
+}
+
+message IDRequest {
+}
+
+message IDReply {
+  string message = 1;
+}

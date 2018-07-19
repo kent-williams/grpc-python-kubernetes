@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: gpd
+  name: gpd
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gpd
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: gpd
+    spec:
+      containers:
+      - image: k3nt/grpc-python-service
+        imagePullPolicy: ""
+        name: gpd
+        ports:
+        - containerPort: 50051
+          name: grpc
+      restartPolicy: Always

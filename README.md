@@ -8,6 +8,10 @@ sudo docker run --rm -p 50051:50051 --name grpc-python-service k3nt/grpc-python-
 ```
 
 ### Deploy Kubernetes Cluster with NGINX Ingress
+
+**Important
+You will need to change the host in gpd-ing.yaml with a domain that points to your ingress controller.
+
 ```
 kubectl create -f gpd-dep.yaml
 kubectl create -f gpd-svc.yaml

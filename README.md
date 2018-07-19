@@ -4,7 +4,7 @@ It consist of a single service that responds with a UUID that is randomly genera
 
 ### Run Docker Image
 ```
-sudo docker run --rm -p 50051:50051 --name grpc-python-docker k3nt/grpc-python-docker
+sudo docker run --rm -p 50051:50051 --name grpc-python-service k3nt/grpc-python-service
 ```
 
 ### Deploy Kubernetes Cluster with NGINX Ingress
